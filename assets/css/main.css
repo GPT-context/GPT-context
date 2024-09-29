@@ -3903,3 +3903,18 @@ input, select, textarea {
     background-color: #36c3a7; /* Color de fondo al pasar el mouse */
 }
 
+.blinking-cursor {
+    display: inline-block;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+

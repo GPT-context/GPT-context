@@ -21,7 +21,10 @@
 				<!-- Intro -->
 				<section class="intro">
 					<header>
-						<h1>context</h1>
+						<h1>
+							<span id="typed-text"></span>
+							<span class="blinking-cursor">_</span>
+						</h1>
 						<p>Simplify your workflow with ia</p>
 						<ul class="actions">
 							<!-- Botón de descarga -->
@@ -35,6 +38,8 @@
 						<span class="image fill" data-position="center"><img src="images/pic01.jpg" alt="" /></span>
 					</div>
 				</section>
+
+
 				<!-- Section -->
 					<section id="first">
 						<header>
@@ -91,6 +96,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				const text = "context"; // El texto que se va a mostrar
+				const typedTextElement = document.getElementById("typed-text");
+				let index = 0;
+
+				function type() {
+					if (index < text.length) {
+						typedTextElement.textContent += text.charAt(index);
+						index++;
+						setTimeout(type, 200); // Tiempo en milisegundos entre cada letra
+					}
+				}
+
+				type(); // Inicia la función al cargar la página
+			</script>
 
 	</body>
 </html>
