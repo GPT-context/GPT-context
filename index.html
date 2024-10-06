@@ -6,11 +6,12 @@
 -->
 <html>
 	<head>
-		<title>Paradigm Shift by HTML5 UP</title>
+		<title>Context</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
+		<link rel="icon" href="images/icon.ico" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -19,64 +20,75 @@
 			<div id="wrapper">
 
 				<!-- Intro -->
-				<section class="intro">
-					<header>
+					<section class="intro">
+					  <header>
 						<h1>
-							<span id="typed-text"></span>
-							<span class="blinking-cursor">_</span>
+						  <span id="typed-text"></span>
+						  <span class="blinking-cursor">_</span>
 						</h1>
 						<p>Simplify your workflow with ia</p>
 						<ul class="actions">
-							<!-- Botón de descarga -->
-							<a href="releases/win-x64/ContextInstaller.rar" class="download-button">
-								download
-							</a>
-							<li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
+						  <!-- Botón de descarga -->
+						  <a href="releases/win-x64/ContextInstaller.rar" class="download-button">
+							download
+						  </a>
+						  <li><a href="#first" class="arrow scrolly"><span class="label">Next</span></a></li>
 						</ul>
-					</header>
-					<div class="content">
-						<span class="image fill" data-position="center"><img src="images/pic01.jpg" alt="" /></span>
-					</div>
-				</section>
+					  </header>
+					  <div class="content">
+						<div class="image-container" id="imageContainer">
+						  <div class="image-switcher" id="image1"></div> <!-- Imagen por defecto -->
+						  <div class="image-switcher" id="image2"></div> <!-- Imagen al pasar el ratón -->
+						</div>
+					  </div>
+					</section>
 
 
 				<!-- Section -->
 					<section id="first">
-						<header>
-							<h2>$ context</h2>
-						</header>
-						<div class="content">
-							<p><strong>Summarize your project</strong> with a single command.</p>
-							<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+					  <header>
+						<h2>$ context</h2>
+					  </header>
+					  <div class="content">
+						<p><strong>Condense your project</strong> into a string.</p>
+						<div class="image-container" id="imageContainerSecond">
+						  <div class="image-switcher" id="image1Second"></div> <!-- Imagen por defecto -->
+						  <div class="image-switcher" id="image2Second"></div> <!-- Imagen al pasar el ratón -->
 						</div>
+					  </div>
 					</section>
-
-				<!-- Section -->
-					<section>
-						<header>
-							<h2>$ context add</h2>
-						</header>
-						<div class="content">
-							<p><strong>Automatically copy</strong> the files you are working on.</p>
-							<div class="gallery">
-								<a href="images/gallery/fulls/01.jpg" class="landscape"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
-							</div>
-							
-						</div>
-					</section>
-
+					
 				<!-- Section -->
 					<section>
 						<header>
 							<h2>$ context ia</h2>
 						</header>
 						<div class="content">
-							<p><strong>Boost your context generation</strong> using artificial intelligence.</p>
-							<div class="gallery">
-								<a href="images/gallery/fulls/01.jpg" class="landscape"><img src="images/gallery/thumbs/01.jpg" alt="" /></a>
+							<p><strong>Summarize your project</strong> with a single command.</p>
+							<div class="image-container" id="imageContainerIA">
+								<div class="image-switcher" id="image1IA"></div> <!-- Imagen por defecto -->
+								<div class="image-switcher" id="image2IA"></div> <!-- Imagen al pasar el ratón -->
 							</div>
 						</div>
 					</section>
+
+				<!-- Section -->
+					<section>
+						<header>
+							<h2>$ context add / context check</h2>
+						</header>
+						<div class="content">
+							<p><strong>Automatically copy</strong> the files you are working on.</p>
+							<div class="image-container" id="imageContainerThird">
+							  <div class="image-switcher" id="image1Third"></div> <!-- Imagen por defecto -->
+							  <div class="image-switcher" id="image2Third"></div> <!-- Imagen al pasar el ratón -->
+							</div>	
+							
+						</div>
+					</section>
+
+				
+
 			</div>
 
 		<!-- Footer -->
@@ -111,6 +123,68 @@
 
 				type(); // Inicia la función al cargar la página
 			</script>
+			<script>
+			  // Obtener el contenedor de la imagen
+			  const imageContainer = document.getElementById('imageContainer');
+
+			  // Variable para controlar si la imagen ha sido cambiada
+			  let imageChanged = false;
+
+			  // Añadir un evento de mouseover
+			  imageContainer.addEventListener('mouseover', () => {
+				if (!imageChanged) {
+				  // Cambiar las opacidades de las imágenes
+				  document.getElementById('image1').style.opacity = '0'; // Ocultar la primera imagen
+				  document.getElementById('image2').style.opacity = '1'; // Mostrar la segunda imagen
+				  imageChanged = true; // Marcar que la imagen ha sido cambiada
+				}
+			  });
+			</script>
+			<!-- JavaScript -->
+			<script>
+				// Obtener el contenedor de la segunda imagen
+				const imageContainerSecond = document.getElementById('imageContainerSecond');
+				let imageChangedSecond = false;
+
+				// Obtener el contenedor de la tercera imagen
+				const imageContainerThird = document.getElementById('imageContainerThird');
+				let imageChangedThird = false;
+
+				// Evento para el segundo contenedor
+				imageContainerSecond.addEventListener('mouseover', () => {
+					if (!imageChangedSecond) {
+						document.getElementById('image1Second').style.opacity = '0'; // Ocultar la primera imagen
+						document.getElementById('image2Second').style.opacity = '1'; // Mostrar la segunda imagen
+						imageChangedSecond = true; // Marcar que la imagen ha sido cambiada
+					}
+				});
+
+				// Evento para el tercer contenedor
+				imageContainerThird.addEventListener('mouseover', () => {
+					if (!imageChangedThird) {
+						document.getElementById('image1Third').style.opacity = '0'; // Ocultar la primera imagen
+						document.getElementById('image2Third').style.opacity = '1'; // Mostrar la segunda imagen
+						imageChangedThird = true; // Marcar que la imagen ha sido cambiada
+					}
+				});
+			</script>
+			<script>
+				// Obtener el contenedor de la sección IA
+				const imageContainerIA = document.getElementById('imageContainerIA');
+				let imageChangedIA = false;
+
+				// Evento para el contenedor de la sección IA
+				imageContainerIA.addEventListener('mouseover', () => {
+					if (!imageChangedIA) {
+						document.getElementById('image1IA').style.opacity = '0'; // Ocultar la primera imagen
+						document.getElementById('image2IA').style.opacity = '1'; // Mostrar la segunda imagen
+						imageChangedIA = true; // Marcar que la imagen ha sido cambiada
+					}
+				});
+			</script>
+
+			
+			
 
 	</body>
 </html>

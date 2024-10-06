@@ -3918,3 +3918,90 @@ input, select, textarea {
 }
 
 
+
+
+  .intro .content .image-container {
+    position: relative; /* Posicionamiento relativo para el contenedor */
+    width: 100%; /* Ancho del contenedor */
+    height: 100%; /* Alto del contenedor (ajústalo según necesites) */
+    overflow: hidden; /* Evitar que la imagen se salga del contenedor */
+  }
+
+  .image-switcher {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear al contenedor */
+    left: 0; /* Alinear al contenedor */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-size: cover; /* Cubrir el contenedor */
+    background-position: center; /* Centrar la imagen */
+    transition: opacity 0.5s ease; /* Transición suave de opacidad */
+  }
+
+  /* Imagen por defecto */
+  #image1 {
+    background-image: url('../../images/pic01d.jpg'); /* Imagen por defecto */
+    opacity: 1; /* Totalmente visible */
+  }
+
+  /* Imagen al pasar el ratón */
+  #image2 {
+    background-image: url('../../images/pic01.jpg'); /* Imagen al pasar el ratón */
+    opacity: 0; /* Inicialmente oculta */
+  }
+  
+  
+.image-container {
+    position: relative; /* Posicionamiento relativo para el contenedor */
+    width: 100%; /* Ancho del contenedor */
+    height: 400px; /* Ajusta el alto según sea necesario */
+    overflow: hidden; /* Evitar que la imagen se salga del contenedor */
+}
+
+.image-switcher {
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0; /* Alinear al contenedor */
+    left: 0; /* Alinear al contenedor */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    background-size: cover; /* Asegura que la imagen cubra el contenedor */
+    background-position: center; /* Centrar la imagen */
+    transition: opacity 0.5s ease; /* Transición suave de opacidad */
+}
+
+/* Imagen por defecto para la segunda sección */
+#image1Second {
+    background-image: url('../../images/pic02.jpg'); /* Imagen por defecto */
+    opacity: 1; /* Totalmente visible */
+}
+
+/* Imagen al pasar el ratón para la segunda sección */
+#image2Second {
+    background-image: url('../../images/pic02d.jpg'); /* Segunda imagen que se mostrará */
+    opacity: 0; /* Inicialmente oculta */
+}
+
+/* Imagen por defecto para la tercera sección */
+#image1Third {
+    background-image: url('../../images/pic03.jpg'); /* Imagen por defecto */
+    opacity: 1; /* Totalmente visible */
+}
+
+/* Imagen al pasar el ratón para la tercera sección */
+#image2Third {
+    background-image: url('../../images/pic03d.jpg'); /* Segunda imagen que se mostrará */
+    opacity: 0; /* Inicialmente oculta */
+}
+/* Imagen por defecto para la sección IA */
+#image1IA {
+    background-image: url('../../images/pic04.jpg'); /* Imagen por defecto */
+    opacity: 1; /* Totalmente visible */
+}
+
+/* Imagen al pasar el ratón para la sección IA */
+#image2IA {
+    background-image: url('../../images/pic04d.jpg'); /* Segunda imagen que se mostrará */
+    opacity: 0; /* Inicialmente oculta */
+}
+
+  
