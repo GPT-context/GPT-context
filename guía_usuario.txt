@@ -1,0 +1,18 @@
+Lo más facil de la aplicación:
+
+context: Genera un resumen compacto del proyecto, que puede ser entendido por la inteligencia artificial.
+
+context ia: Utiliza gemini para generar un resumen de tu proyecto. La primera vez que lo ejecutes te pedira una API key, puedes conseguirla gratis y facil en: https://ai.google.dev/aistudio
+
+La parte un poco más dificil: generacion de contextos personalizados.
+
+// Un contexto tan solo es una lista de archivos.
+Puedes definir un nuevo contexto, o cambiar a uno que ya existe usando context check <nombre_del_contexto>, esto tambien mostrara el contenido del contexto
+Puedes añadir nuevos archivos a tu contexto actual con context add <ruta_archivo>
+Puedes listar todos los contextos de tu directorio .context con: context list
+
+Puedes definir qué fragmentos de cada archivo se muestran en cada contexto incluyen las etiquetas: CONTEXT_{context_name}_START y CONTEXT_{context_name}_END dentro de comentarios, tantas veces como necesites.
+
+context init: Por defecto, los contextos que generes se guardan en una carpeta global. Context init te permite generar una carpeta .context local que puedas subir al respositorio de git.
+
+context help o context h: Muestra la información de ayuda y los comandos disponibles.
